@@ -1,14 +1,15 @@
+try:
+    hours = raw_input("Enter Hours: ")
+    h = float(hours)
+    rate = raw_input("Enter Rate: ")
+    r = float(rate)
 
-def compute_pay():
-    try:
-        hours = raw_input("Enter Hours: ")
-        h = float(hours)
-        rate = raw_input("Enter Rate: ")
-        r = float(rate)
+except:
+    print "Oops! That was not a valid number. Please try again..."
+    exit()
 
-    except:
-        print "Oops! That was not a valid number. Please try again..."
-        exit()
+
+def compute_pay(h, r):
     
     if h <= 40:
         gross_pay = h * r
@@ -19,4 +20,4 @@ def compute_pay():
         gross_pay = normal_hours + overtime
         print gross_pay
 
-compute_pay()
+compute_pay(h,r)
